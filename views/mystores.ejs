@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="/css/mystores.css">
+
+<div class="card-columns">
+<%  users.forEach(function(user){%>
+<div class="card " style="width: 18rem;">
+    
+    <img class="card-img-top" src="/pictures/apple.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"><%= user.storeName%></h5>
+      <p class="card-text"><%= user.description%></p>
+      <a href="#" class="btn btn-primary">Check Products</a>
+    </div>
+    
+</div>
+<% }) %>  
+</div>

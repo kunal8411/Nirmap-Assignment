@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/signin.css">
+    
+
+<div class="signin"> 
+<div class="col_3">
+
+    <h5>Seller's login</h5>
+		<form action="/users/createsession" method="POST">
+			<label>Username:</label>
+			<input type="email" name="email">
+			<label>Password:</label>
+			<input type="password" name="password">
+			<br>
+			<br>
+			<input class="button" type="submit" value="submit">
+		</form>
+	
+</div>
+
+<h1>OR</h1>
+
+<div class="container">
+	<div class="jumbotron text-center text-primary">
+		<h1><span class="fa fa-lock"></span> Social Authentication</h1>
+		<p>Login or Register with:</p>
+		<a href="/users/auth/google" class="btn btn-danger"><span class="fa fa-google"></span> SignIn with Google</a>
+	</div>
+</div>
+</div>

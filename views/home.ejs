@@ -1,0 +1,17 @@
+<div>
+<% if(locals.user){ %>
+
+    <h1>Hello 
+        <%= locals.user.name%>,
+        welcome 
+    </h1>
+    <br><br>
+    <a href="/users/addstoreinfo">Click here to add store</a>
+
+<% }else { %>
+    <h1>Hello welcome,</h1>
+    <h3>Please log in to see the store </h3>
+<% } %>      
+
+    
+</div>

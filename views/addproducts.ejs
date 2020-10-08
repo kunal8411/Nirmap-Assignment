@@ -1,0 +1,28 @@
+<h5>Add Product Infromation</h5>
+<form action="/users/addstoreinfo" method="POST">
+    <div>
+        <input type="hidden" name="email" value="<%= locals.user.email%>">
+    </div>
+    <br><br>
+    <div>
+        <label>Product Name:</label>
+        <input type="text" name="productname">
+    </div> <br><br>
+    <div>
+        <label>Price:</label>
+        <input type="test" name="price">
+    </div> <br><br>
+    
+    <div>
+        <label>Product Category</label>
+        <select name="type" id="">
+            <option value="medical">Medical</option>
+            <option value="food">Food</option>
+            <option value="fashion">Fashion</option>
+            <option value="Furniture">Furniture</option>
+        </select>
+    </div>
+    <br>
+    <br>
+    <input class="button" type="submit" value="submit">
+</form>
