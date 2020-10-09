@@ -1,7 +1,10 @@
 <h5>Add Product Infromation</h5>
-<form action="/users/addstoreinfo" method="POST">
+<form action="/products/viewproducts" method="POST">
     <div>
         <input type="hidden" name="email" value="<%= locals.user.email%>">
+    </div>
+    <div>
+        <input type="hidden" name="storeid" value="<%= locals.user.storeInfo._id%>">
     </div>
     <br><br>
     <div>
@@ -14,13 +17,8 @@
     </div> <br><br>
     
     <div>
-        <label>Product Category</label>
-        <select name="type" id="">
-            <option value="medical">Medical</option>
-            <option value="food">Food</option>
-            <option value="fashion">Fashion</option>
-            <option value="Furniture">Furniture</option>
-        </select>
+        <label>Product Pic:</label>
+        <input type="file" name="filename"  >
     </div>
     <br>
     <br>

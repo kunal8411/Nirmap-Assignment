@@ -34,29 +34,24 @@ router.get('/auth/google/callback',passport.authenticate('google',
 router.get('/addstoreinfo', userController.addstorepage)
 
 //add the info of store data into database
-router.post('/addstoreinfo', function(req,res){
+router.post('/mystores',  function(req,res){
     var info=[];
     info['email']= req.body.email;
     info['storename']=req.body.storename
-    info['type']=req.body.type
+    info['type']=req.body.type 
     info['description']=req.body.description
-    User.addstoreinfo(info, function(err,user){
+    info['filename']= req.body.filename
+
+
+    User.addstoreinfo(info ,function(err,instructor){
         if(err){console.log(err)}
         
     });
-    User.findOne({email: req.body.email},function(err,user){
-        if(err){
-            console.log('error in finding user', err);
-            return; 
-     
-        }
-        
-        return res.render('../views/mystores',{
-            users:user.storeInfo
-        });
-    });
+    res.render('../views/addedSuccessfullu');
     
-})
+    
+    
+    });
 
 module.exports=router;
 

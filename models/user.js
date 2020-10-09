@@ -1,5 +1,6 @@
 
 const mongoose= require('mongoose');
+const path= require('path');
 
 const userSchema = new mongoose.Schema({
     email:{
@@ -35,6 +36,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         
     },
+    
     storeInfo:[{
         storeName:{
             type:String
@@ -48,12 +50,12 @@ const userSchema = new mongoose.Schema({
         storeCategory:{
             type:String
         }
+       
     }]
     
 },  {
         timestamps: true
 });
-
 
 
 const Users=mongoose.model('Users',userSchema); 
@@ -66,13 +68,19 @@ module.exports.addstoreinfo= function(info, callback ){
     storename=info['storename'];
     type=info['type'];
     description= info['description'];
-    
+    filename=info['filename']
 
     var query= {email:email}
     Users.findOneAndUpdate(
         query,
-        {$push:{"storeInfo":{storeName:storename, description:description,storeCategory:type}}},
+        {$push:{"storeInfo":{
+             storeName:storename,
+             description:description,
+             storeCategory:type,
+             image:filename
+            }}},
         {safe: true, upsert: true},
         callback
     )
+    
 }

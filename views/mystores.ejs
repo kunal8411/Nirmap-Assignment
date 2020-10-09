@@ -4,11 +4,12 @@
 <%  users.forEach(function(user){%>
 <div class="card " style="width: 18rem;">
     
-    <img class="card-img-top" src="/pictures/apple.jpg" alt="Card image cap">
+    <img class="card-img-top" src="/pictures/<%= user.image%>" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title"><%= user.storeName%></h5>
       <p class="card-text"><%= user.description%></p>
-      <a href="#" class="btn btn-primary">Check Products</a>
+      <a href="#" class="btn btn-primary">Check Products</a><br>
+      <a href="/products/addproducts" class="btn btn-primary">Add Products</a>
     </div>
     
 </div>
