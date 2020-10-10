@@ -49,7 +49,20 @@ const userSchema = new mongoose.Schema({
         },
         storeCategory:{
             type:String
-        }
+        },
+        productInfo:[{
+        
+            title:{
+                type:String
+            },
+            price:{
+                type:String
+            },
+            productImage:{
+                type:String
+            }
+           
+        }]
        
     }]
     

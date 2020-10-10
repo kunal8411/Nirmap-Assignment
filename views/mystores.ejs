@@ -8,10 +8,21 @@
     <div class="card-body">
       <h5 class="card-title"><%= user.storeName%></h5>
       <p class="card-text"><%= user.description%></p>
-      <a href="#" class="btn btn-primary">Check Products</a><br>
-      <a href="/products/addproducts" class="btn btn-primary">Add Products</a>
+      <a href="/products/addproducts/<%=user._id%>" class="btn btn-primary">Add Products</a><br>
+      <a href="/products/showallproducts/<%=user._id%>" class="btn btn-primary">View Products</a>
+      <a href="/click/generateLink/<%=user._id%>" class="btn btn-primary" >Click here to generate link</a>
     </div>
     
 </div>
 <% }) %>  
+<div class="card " style="width: 18rem;">
+    
+  
+  <div class="card-body">
+    <h5 class="card-title">To add More stores</h5>
+    <p class="card-text"><a href="/users/addstoreinfo">click here</a> </p>
+    
+  </div>
+  
+</div>
 </div>

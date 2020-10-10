@@ -6,8 +6,11 @@ const router= express.Router();
 
 const productController=require('../controller/products_controller')
 
-router.get('/addproducts', productController.addproducts)
+router.get('/addproducts/:id', productController.getAddProductsPage)
 
 
-router.post('/viewproducts' ,productController.addProductsIntoStore)
+router.post('/addproducts/:id' ,productController.addProductsIntoStore)
+
+router.get('/showallproducts/:id', productController.showAllProducts)
+
 module.exports=router;

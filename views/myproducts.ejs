@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="/css/mystores.css">
+
+<div class="card-columns">
+<%  users.forEach(function(user){%>
+<div class="card " style="width: 18rem;">
+    
+    <img class="card-img-top" src="/pictures/<%= user.productImage%>" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"><%= user.title%></h5>
+      <p class="card-text">Price:$<%= user.price%></p>
+      
+    </div>
+    
+</div>
+<% }) %>  
+</div>

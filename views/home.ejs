@@ -6,7 +6,12 @@
         welcome 
     </h1>
     <br><br>
-    <a href="/users/addstoreinfo">Click here to add store</a>
+    <% if (locals.user.storeInfo.length==0){ %>
+        <h2>You do not have any store</h2>
+        <a href="/users/addstoreinfo">Click here to add store</a>
+    <% }else{ %>    
+        <a href="/shop/mystores/<%= locals.user.id%>">Click here to see the your store's</a>
+    <% } %>    
 
 <% }else { %>
     <h1>Hello welcome,</h1>

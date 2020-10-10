@@ -1,10 +1,10 @@
 <h5>Add Product Infromation</h5>
-<form action="/products/viewproducts" method="POST">
+<form action="/products/addproducts/<%=storeId%>" method="POST">
     <div>
         <input type="hidden" name="email" value="<%= locals.user.email%>">
     </div>
     <div>
-        <input type="hidden" name="storeid" value="<%= locals.user.storeInfo._id%>">
+        <input type="hidden" name="storeid" value="<%=storeId%>">
     </div>
     <br><br>
     <div>
