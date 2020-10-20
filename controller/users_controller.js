@@ -9,7 +9,7 @@ module.exports.signin=function(req,res){
 }
 
 //post method for signup page  
-module.exports.create= function(req,res){
+module.exports.create= function(req,res){ 
     if(req.body.password != req.body.confirmpassword){
         return res.redirect('back');
 

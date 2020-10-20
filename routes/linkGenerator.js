@@ -8,4 +8,4 @@ router.get('/generateLink/:id',linkGeneratorController.linkGenerator)
 
 
 
-module.exports=router;
+module.exports=router;          
