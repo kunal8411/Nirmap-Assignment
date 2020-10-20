@@ -10,7 +10,7 @@ const MongoStore=require('connect-mongo')(session);
 
 const cookieParser= require('cookie-parser');
 
-
+          
 const expressLayout=require('express-ejs-layouts');
 app.use(expressLayout);
 app.set('layout extractStyles',true);
