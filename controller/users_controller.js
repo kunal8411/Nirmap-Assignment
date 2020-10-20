@@ -8,7 +8,7 @@ module.exports.signin=function(req,res){
     res.render('../views/signin')
 }
 
-//post method for signup page
+//post method for signup page  
 module.exports.create= function(req,res){
     if(req.body.password != req.body.confirmpassword){
         return res.redirect('back');
